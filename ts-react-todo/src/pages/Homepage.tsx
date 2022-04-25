@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { Todo } from "../components/Todo"
-
 interface todo {
     id: number,
     text: string
@@ -27,7 +26,7 @@ export function Homepage() {
             <h1 className="appTitle">My Todo List</h1>
             <div className="inputContainer">
                 <input className="textInput" type="text" onChange={(e) => setInputText(e.target.value)}></input>
-                <button className="button--input" onClick={() => addTodo()}><i className="fas fa-plus"></i></button>
+                <button className="button button--input" onClick={() => addTodo()}><i className="fas fa-plus"></i></button>
             </div>
             
             <div className="todoList">

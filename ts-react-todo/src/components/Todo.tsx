@@ -16,7 +16,9 @@ export function Todo(props: TodoProps) {
         //message
         props.removeTodo(id)
     }
-
+    function fadeOut() {
+        
+    }
     return (
         <div className="todo">
             <p>{props.text}</p>

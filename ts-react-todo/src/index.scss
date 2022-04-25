@@ -39,6 +39,7 @@ code {
 }
 
 .button {
+  cursor: pointer;
   border: none;
   background: transparent;
   display: flex;
@@ -53,8 +54,10 @@ code {
   }
   &--red {
     color: red;
+    font-size: 1.2rem;
   }
   &--input {
+    cursor: pointer;
     border: none;
     background: $text-color;
     display: flex;
@@ -65,7 +68,9 @@ code {
     border-radius: 0 5px 5px 0;
   }
 }
-
+i:hover {
+  transform: scale(1.2);
+}
 .todo {
   display: flex;
   align-items: center;
@@ -75,4 +80,12 @@ code {
   margin-top: 8px;
   width: 200px;
   padding: 0 5px;
+
+  animation: beat 0.6s;
+}
+
+@keyframes beat {
+  0% {transform: scale(0.9); opacity: 0;}
+  50% {transform: scale(1.1); opacity: 1;}
+  100% {transform: scale(1);}
 }

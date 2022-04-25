@@ -46,6 +46,7 @@ code {
 }
 
 .button {
+  cursor: pointer;
   border: none;
   background: transparent;
   display: -webkit-box;
@@ -68,9 +69,11 @@ code {
 
 .button--red {
   color: red;
+  font-size: 1.2rem;
 }
 
 .button--input {
+  cursor: pointer;
   border: none;
   background: #F5F7FA;
   display: -webkit-box;
@@ -85,6 +88,11 @@ code {
   color: #424242;
   font-size: 1.5rem;
   border-radius: 0 5px 5px 0;
+}
+
+i:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .todo {
@@ -102,5 +110,41 @@ code {
   margin-top: 8px;
   width: 200px;
   padding: 0 5px;
+  -webkit-animation: beat 0.6s;
+          animation: beat 0.6s;
+}
+
+@-webkit-keyframes beat {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes beat {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 /*# sourceMappingURL=index.css.map */
