@@ -23,11 +23,11 @@ export function Homepage() {
         setTodos(newTodos.slice())
     }
     return (
-        <>
-            <h1>My Todo List</h1>
-            <div>
-                <input type="text" onChange={(e) => setInputText(e.target.value)}></input>
-                <button onClick={() => addTodo()}>Ajouter</button>
+        <div className="pageContainer">
+            <h1 className="appTitle">My Todo List</h1>
+            <div className="inputContainer">
+                <input className="textInput" type="text" onChange={(e) => setInputText(e.target.value)}></input>
+                <button className="button--input" onClick={() => addTodo()}><i className="fas fa-plus"></i></button>
             </div>
             
             <div className="todoList">
@@ -35,6 +35,6 @@ export function Homepage() {
                     return <Todo text={todo.text} id={todo.id} removeTodo={removeTodo}></Todo>
                   })}
             </div>
-        </>
+        </div>
     )
 }

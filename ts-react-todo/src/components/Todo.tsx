@@ -18,10 +18,13 @@ export function Todo(props: TodoProps) {
     }
 
     return (
-        <div>
+        <div className="todo">
             <p>{props.text}</p>
-            <button onClick={() => valider(props.id)}>Valider</button>
-            <button onClick={() => supprimer(props.id)}>Supprimer</button>
+            <div>
+                <button className="button button--green" onClick={() => valider(props.id)}><i className="fas fa-check"></i></button>
+                <button className="button button--red" onClick={() => supprimer(props.id)}><i className="fas fa-times"></i></button>
+            </div>
+            
         </div>
     )
 }
